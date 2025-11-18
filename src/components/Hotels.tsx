@@ -1,67 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import { Star, MapPin, Wifi, Waves, Coffee } from 'lucide-react';
-
-const hotels = [
-  {
-    id: 1,
-    name: 'Hotel Margarita Dynasty',
-    location: 'Playa El Agua',
-    rating: 5,
-    price: '$120',
-    image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
-    amenities: ['WiFi', 'Playa', 'Desayuno'],
-    description: 'Lujo frente al mar con vistas espectaculares'
-  },
-  {
-    id: 2,
-    name: 'Sunsol Isla Caribe',
-    location: 'Playa El Yaque',
-    rating: 4,
-    price: '$85',
-    image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800',
-    amenities: ['WiFi', 'Playa', 'Desayuno'],
-    description: 'Resort todo incluido con actividades acuáticas'
-  },
-  {
-    id: 3,
-    name: 'Hesperia Playa El Agua',
-    location: 'Playa El Agua',
-    rating: 5,
-    price: '$145',
-    image: 'https://images.pexels.com/photos/2506988/pexels-photo-2506988.jpeg?auto=compress&cs=tinysrgb&w=800',
-    amenities: ['WiFi', 'Playa', 'Desayuno'],
-    description: 'Elegancia y confort en el corazón de Margarita'
-  },
-  {
-    id: 4,
-    name: 'Hotel Dunes',
-    location: 'Pedro González',
-    rating: 4,
-    price: '$95',
-    image: 'https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=800',
-    amenities: ['WiFi', 'Playa', 'Desayuno'],
-    description: 'Ambiente familiar con acceso directo a la playa'
-  },
-  {
-    id: 5,
-    name: 'Lidotel Hotel Boutique',
-    location: 'Porlamar',
-    rating: 5,
-    price: '$110',
-    image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=800',
-    amenities: ['WiFi', 'Playa', 'Desayuno'],
-    description: 'Boutique hotel con servicio personalizado'
-  },
-  {
-    id: 6,
-    name: 'Costa Caribe Beach Hotel',
-    location: 'Juan Griego',
-    rating: 4,
-    price: '$75',
-    image: 'https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=800',
-    amenities: ['WiFi', 'Playa', 'Desayuno'],
-    description: 'Vistas increíbles del atardecer caribeño'
-  }
-];
+import { hotelsData } from '../data/hotels';
 
 const amenityIcons = {
   WiFi: Wifi,
@@ -70,6 +9,8 @@ const amenityIcons = {
 };
 
 export default function Hotels() {
+  const navigate = useNavigate();
+
   return (
     <section id="hotels" className="py-20 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -83,7 +24,7 @@ export default function Hotels() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {hotels.map((hotel) => (
+          {hotelsData.map((hotel) => (
             <div
               key={hotel.id}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
@@ -131,7 +72,10 @@ export default function Hotels() {
                   })}
                 </div>
 
-                <button className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors">
+                <button
+                  onClick={() => navigate(`/hoteles/${hotel.slug}`)}
+                  className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors"
+                >
                   Ver Disponibilidad
                 </button>
               </div>
