@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Star, MapPin, Wifi, Waves, Coffee, Send } from 'lucide-react';
+import { ArrowLeft, Star, MapPin, Wifi, Waves, Coffee, Send, Tv, Wind, UtensilsCrossed, Lock, Phone } from 'lucide-react';
 import { hotelsData } from '../data/hotels';
 
 export default function HotelDetail() {
@@ -35,7 +35,13 @@ export default function HotelDetail() {
   const amenityIcons: Record<string, React.ComponentType<any>> = {
     WiFi: Wifi,
     Playa: Waves,
-    Desayuno: Coffee
+    Desayuno: Coffee,
+    'TV Cable': Tv,
+    'A/A': Wind,
+    Kitchenette: UtensilsCrossed,
+    'Caja de Seguridad': Lock,
+    'Secador de cabello': Wind,
+    Teléfono: Phone
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -106,10 +112,46 @@ Mensaje: ${formData.message}`;
             </p>
 
             <div className="bg-blue-50 rounded-xl p-6 mb-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Información del Hotel</h3>
+              <div className="grid grid-cols-2 gap-4 text-sm mb-4">
+                {hotel.category && (
+                  <div>
+                    <span className="font-semibold text-gray-900">Categoría:</span>
+                    <span className="text-gray-600 ml-2">{hotel.category}</span>
+                  </div>
+                )}
+                {hotel.type && (
+                  <div>
+                    <span className="font-semibold text-gray-900">Tipo:</span>
+                    <span className="text-gray-600 ml-2">{hotel.type}</span>
+                  </div>
+                )}
+                {hotel.checkIn && (
+                  <div>
+                    <span className="font-semibold text-gray-900">Check In:</span>
+                    <span className="text-gray-600 ml-2">{hotel.checkIn}</span>
+                  </div>
+                )}
+                {hotel.checkOut && (
+                  <div>
+                    <span className="font-semibold text-gray-900">Check Out:</span>
+                    <span className="text-gray-600 ml-2">{hotel.checkOut}</span>
+                  </div>
+                )}
+                {hotel.minStay && (
+                  <div>
+                    <span className="font-semibold text-gray-900">Estadía Mínima:</span>
+                    <span className="text-gray-600 ml-2">{hotel.minStay}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="bg-blue-50 rounded-xl p-6 mb-6">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Servicios</h3>
               <div className="grid grid-cols-3 gap-4">
                 {hotel.amenities.map((amenity) => {
-                  const Icon = amenityIcons[amenity as keyof typeof amenityIcons];
+                  const Icon = amenityIcons[amenity as keyof typeof amenityIcons] || Wifi;
                   return (
                     <div key={amenity} className="flex flex-col items-center">
                       <Icon className="w-8 h-8 text-blue-500 mb-2" />
@@ -119,6 +161,21 @@ Mensaje: ${formData.message}`;
                 })}
               </div>
             </div>
+
+            {hotel.rooms && hotel.rooms.length > 0 && (
+              <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Habitaciones</h3>
+                {hotel.rooms.map((room, index) => (
+                  <div key={index} className="mb-4 last:mb-0">
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-semibold text-gray-900">{room.name}</h4>
+                      <span className="text-blue-600 font-bold">{room.price}</span>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">{room.description}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 

@@ -10,21 +10,47 @@ export interface Hotel {
   description: string;
   fullDescription: string;
   whatsappNumber: string;
+  category?: string;
+  type?: string;
+  country?: string;
+  city?: string;
+  checkIn?: string;
+  checkOut?: string;
+  minStay?: string;
+  rooms?: Array<{
+    name: string;
+    description: string;
+    price: string;
+  }>;
 }
 
 export const hotelsData: Hotel[] = [
   {
     id: 1,
     slug: 'dynasty',
-    name: 'Hotel Margarita Dynasty',
-    location: 'Playa El Agua',
-    rating: 5,
-    price: '$120',
+    name: 'Margarita Dynasty Hotel & Suites',
+    location: 'Porlamar',
+    rating: 3,
+    price: '$51',
     image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
-    amenities: ['WiFi', 'Playa', 'Desayuno'],
-    description: 'Lujo frente al mar con vistas espectaculares',
-    fullDescription: 'Sumérgete en el lujo absoluto en el Hotel Margarita Dynasty. Este resort de cinco estrellas está diseñado para ofrecerte la experiencia más exclusiva en la Isla de Margarita. Con habitaciones frente al mar, vistas espectaculares del atardecer y todas las comodidades de un hotel de clase mundial.',
-    whatsappNumber: '584126204490'
+    amenities: ['WiFi', 'TV Cable', 'A/A', 'Kitchenette', 'Caja de Seguridad', 'Secador de cabello'],
+    description: 'Hotel ideal cerca del Centro Comercial La Vela',
+    fullDescription: 'Ubicado en la exclusiva zona a escasos 300 metros del Centro Comercial La Vela y tan solo cinco minutos de los principales centros de diversión de Margarita: hermosas playas, casino, centros comerciales y demás atracciones turísticas. El Margarita Dynasty Hotel & Suites es el lugar ideal para quien piensa disfrutar lo mejor de la Isla de Margarita.',
+    whatsappNumber: '584126204490',
+    category: '3 Estrellas',
+    type: 'Hotel',
+    country: 'Venezuela',
+    city: 'Porlamar',
+    checkIn: '3:00 PM',
+    checkOut: '12:00 PM',
+    minStay: '1 Noche',
+    rooms: [
+      {
+        name: 'Habitación Estándar',
+        description: 'Habitaciones con balcón y una o dos camas Queen. TV por cable. Baño con ducha. Nevera. A/A. Kitchenette. Secador de cabello. Teléfono. Caja de Seguridad y WiFi. Ocupación máxima de 2 adultos y 1 niño.',
+        price: '$51 por noche'
+      }
+    ]
   },
   {
     id: 2,
