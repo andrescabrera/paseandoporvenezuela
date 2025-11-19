@@ -1,11 +1,16 @@
 import { useNavigate } from 'react-router-dom';
-import { Star, MapPin, Wifi, Waves, Coffee } from 'lucide-react';
+import { Star, MapPin, Wifi, Waves, Coffee, Tv, Wind, UtensilsCrossed, Lock } from 'lucide-react';
 import { hotelsData } from '../data/hotels';
 
 const amenityIcons = {
   WiFi: Wifi,
   Playa: Waves,
-  Desayuno: Coffee
+  Desayuno: Coffee,
+  'TV Cable': Tv,
+  'A/A': Wind,
+  Kitchenette: UtensilsCrossed,
+  'Caja de Seguridad': Lock,
+  'Secador de cabello': Wind
 };
 
 export default function Hotels() {
@@ -61,8 +66,9 @@ export default function Hotels() {
                 </p>
 
                 <div className="flex items-center gap-3 mb-4">
-                  {hotel.amenities.map((amenity) => {
+                  {hotel.amenities.slice(0, 3).map((amenity) => {
                     const Icon = amenityIcons[amenity as keyof typeof amenityIcons];
+                    if (!Icon) return null;
                     return (
                       <div key={amenity} className="flex items-center text-gray-600 text-sm">
                         <Icon className="w-4 h-4 mr-1" />
