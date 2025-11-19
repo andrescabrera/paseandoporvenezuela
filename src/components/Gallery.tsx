@@ -1,28 +1,29 @@
 export default function Gallery() {
   const images = [
     {
-      url: 'https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Playa El Agua'
+      url: '/images/gallery/juan-griego.webp',
+      title: 'Juan Griego',
+      description: 'Bahía pintoresca famosa por sus atardeceres'
     },
     {
-      url: 'https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Atardecer Caribeño'
+      url: '/images/gallery/playa-pampatar.webp',
+      title: 'Playa Pampatar',
+      description: 'Aguas cristalinas y ambiente tranquilo'
     },
     {
-      url: 'https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Aguas Cristalinas'
+      url: '/images/gallery/playa-la-caracola.webp',
+      title: 'Playa La Caracola',
+      description: 'Arena blanca y mar turquesa'
     },
     {
-      url: 'https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Palmeras Tropicales'
+      url: '/images/gallery/playa-concorde-paisajes.webp',
+      title: 'Playa Concorde',
+      description: 'Paisajes espectaculares del caribe'
     },
     {
-      url: 'https://images.pexels.com/photos/1007066/pexels-photo-1007066.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Costa Venezolana'
-    },
-    {
-      url: 'https://images.pexels.com/photos/1449767/pexels-photo-1449767.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Paraíso Natural'
+      url: '/images/gallery/libre-de-stress.webp',
+      title: 'Zona Libre de Estrés',
+      description: 'El lugar perfecto para desconectar'
     }
   ];
 
@@ -49,9 +50,10 @@ export default function Gallery() {
                 alt={image.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white text-xl font-bold">{image.title}</h3>
+                  <h3 className="text-white text-xl font-bold mb-1">{image.title}</h3>
+                  <p className="text-white/90 text-sm">{image.description}</p>
                 </div>
               </div>
             </div>
