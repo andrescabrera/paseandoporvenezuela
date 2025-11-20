@@ -86,6 +86,95 @@ Mensaje: ${formData.message}`;
                 className="w-full h-full object-cover"
               />
             </div>
+
+            <div className="mt-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Solicita Información</h2>
+
+              <form onSubmit={handleSubmit}>
+                <div className="grid gap-6 mb-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">Nombre</label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Tu nombre"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid gap-6 mb-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">Entrada</label>
+                    <input
+                      type="date"
+                      name="checkIn"
+                      value={formData.checkIn}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">Salida</label>
+                    <input
+                      type="date"
+                      name="checkOut"
+                      value={formData.checkOut}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">Huéspedes</label>
+                    <input
+                      type="number"
+                      name="guests"
+                      value={formData.guests}
+                      onChange={handleInputChange}
+                      min="1"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-gray-900 mb-2">Mensaje adicional</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Cuéntanos qué necesitas..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-blue-500 text-white py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-blue-600 transition-colors text-lg"
+                >
+                  <Send className="w-5 h-5" />
+                  <span>Enviar por WhatsApp</span>
+                </button>
+              </form>
+            </div>
           </div>
 
           <div>
@@ -177,95 +266,6 @@ Mensaje: ${formData.message}`;
               </div>
             )}
           </div>
-        </div>
-
-        <div className="px-6 md:px-12 py-8 border-t">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Solicita Información</h2>
-
-          <form onSubmit={handleSubmit} className="max-w-2xl">
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Nombre</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tu nombre"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="tu@email.com"
-                />
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Entrada</label>
-                <input
-                  type="date"
-                  name="checkIn"
-                  value={formData.checkIn}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Salida</label>
-                <input
-                  type="date"
-                  name="checkOut"
-                  value={formData.checkOut}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">Huéspedes</label>
-                <input
-                  type="number"
-                  name="guests"
-                  value={formData.guests}
-                  onChange={handleInputChange}
-                  min="1"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <label className="block text-sm font-semibold text-gray-900 mb-2">Mensaje adicional</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Cuéntanos qué necesitas..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-blue-600 transition-colors text-lg"
-            >
-              <Send className="w-5 h-5" />
-              <span>Enviar por WhatsApp</span>
-            </button>
-          </form>
         </div>
       </div>
     </div>
