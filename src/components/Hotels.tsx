@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Star, MapPin, Wifi, Waves, Coffee, Tv, Wind, UtensilsCrossed, Lock } from 'lucide-react';
 import { hotelsData } from '../data/hotels';
+import { useTranslation } from 'react-i18next';
 
 const amenityIcons = {
   WiFi: Wifi,
@@ -15,6 +16,8 @@ const amenityIcons = {
 
 export default function Hotels() {
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
+  const lang = i18n.language as 'es' | 'en';
 
   return (
     <section id="hotels" className="py-20 md:py-32 bg-white">
@@ -79,7 +82,7 @@ export default function Hotels() {
                 </div>
 
                 <button
-                  onClick={() => navigate(`/hoteles/${hotel.slug}`)}
+                  onClick={() => navigate(`/${lang}/hoteles/${hotel.slug}`)}
                   className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors"
                 >
                   Ver Disponibilidad

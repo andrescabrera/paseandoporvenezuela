@@ -2,10 +2,14 @@ import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Star, MapPin, Wifi, Waves, Coffee, Send, Tv, Wind, UtensilsCrossed, Lock, Phone } from 'lucide-react';
 import { hotelsData } from '../data/hotels';
+import Navigation from '../components/Navigation';
+import { useTranslation } from 'react-i18next';
 
 export default function HotelDetail() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
+  const lang = i18n.language as 'es' | 'en';
   const hotel = hotelsData.find(h => h.slug === slug);
   const [formData, setFormData] = useState({
     name: '',
@@ -22,7 +26,7 @@ export default function HotelDetail() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Hotel no encontrado</h1>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate(`/${lang}`)}
             className="text-blue-500 hover:text-blue-600 font-semibold"
           >
             Volver al inicio
@@ -68,9 +72,10 @@ Mensaje: ${formData.message}`;
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto">
+      <Navigation />
+      <div className="max-w-7xl mx-auto pt-20">
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate(`/${lang}`)}
           className="flex items-center space-x-2 px-6 py-4 text-blue-500 hover:text-blue-600 font-semibold transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />

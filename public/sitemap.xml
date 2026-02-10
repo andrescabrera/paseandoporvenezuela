@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage - Spanish (Default) -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es"/>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Homepage - English -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es"/>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Blog Index - Spanish -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog"/>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog Index - English -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog"/>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog Post: Mejores Playas - Spanish -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/mejores-playas-isla-margarita"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Post: Mejores Playas - English -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/blog/mejores-playas-isla-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/mejores-playas-isla-margarita"/>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Post: Gastronomía - Spanish -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/gastronomia-margarita-imprescindible"/>
+    <lastmod>2024-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Post: Gastronomía - English -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/blog/gastronomia-margarita-imprescindible</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/gastronomia-margarita-imprescindible"/>
+    <lastmod>2024-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Post: Itinerario 7 Días - Spanish -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/que-hacer-margarita-7-dias"/>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Post: Itinerario 7 Días - English -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/blog/que-hacer-margarita-7-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/que-hacer-margarita-7-dias"/>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Hotel Pages - Spanish -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/hoteles/hotel-caribe</loc>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/hoteles/hotel-paradise</loc>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Hotel Pages - English -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/hoteles/hotel-caribe</loc>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/hoteles/hotel-paradise</loc>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
