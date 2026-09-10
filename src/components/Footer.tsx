@@ -1,6 +1,8 @@
 import { Instagram, Mail, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -11,12 +13,12 @@ export default function Footer() {
               <span className="text-xl font-bold">Paseando por Venezuela</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Descubre los mejores destinos de Venezuela. Tu aventura comienza aquí.
+              {t('footer.description')}
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Destinos</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.destinations')}</h3>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">Isla de Margarita</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Los Roques</a></li>
@@ -26,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Contáctanos</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.contact')}</h3>
             <div className="space-y-3">
               <a
                 href="https://www.instagram.com/paseandoporvenezuela"
@@ -49,7 +51,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Paseando por Venezuela. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Paseando por Venezuela. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

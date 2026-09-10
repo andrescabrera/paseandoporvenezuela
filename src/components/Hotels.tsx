@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Star, MapPin, Wifi, Waves, Coffee, Tv, Wind, UtensilsCrossed, Lock } from 'lucide-react';
-import { hotelsData } from '../data/hotels';
+import { hotelsData, amenityLabelsEn } from '../data/hotels';
 import { useTranslation } from 'react-i18next';
 
 const amenityIcons = {
@@ -16,7 +16,7 @@ const amenityIcons = {
 
 export default function Hotels() {
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang = i18n.language as 'es' | 'en';
 
   return (
@@ -24,10 +24,10 @@ export default function Hotels() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Hoteles en Isla de Margarita
+            {t('home.hotelsTitle')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Seleccionamos los mejores hoteles para que tu estadía sea inolvidable
+            {t('home.hotelsSubtitle')}
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function Hotels() {
                 />
                 <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full font-bold text-gray-900">
                   {hotel.price}
-                  <span className="text-sm font-normal text-gray-600">/noche</span>
+                  <span className="text-sm font-normal text-gray-600">{t('home.perNight')}</span>
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ export default function Hotels() {
                 </div>
 
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  {hotel.description}
+                  {hotel.description[lang]}
                 </p>
 
                 <div className="flex items-center gap-3 mb-4">
@@ -75,7 +75,7 @@ export default function Hotels() {
                     return (
                       <div key={amenity} className="flex items-center text-gray-600 text-sm">
                         <Icon className="w-4 h-4 mr-1" />
-                        <span>{amenity}</span>
+                        <span>{lang === 'en' ? (amenityLabelsEn[amenity] ?? amenity) : amenity}</span>
                       </div>
                     );
                   })}
@@ -85,7 +85,7 @@ export default function Hotels() {
                   onClick={() => navigate(`/${lang}/hoteles/${hotel.slug}`)}
                   className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors"
                 >
-                  Ver Disponibilidad
+                  {t('home.viewAvailability')}
                 </button>
               </div>
             </div>

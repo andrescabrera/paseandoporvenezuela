@@ -1,21 +1,29 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Star, MapPin, Wifi, Waves, Coffee, Send, Tv, Wind, UtensilsCrossed, Lock, Phone } from 'lucide-react';
-import { hotelsData } from '../data/hotels';
+import { hotelsData, amenityLabelsEn } from '../data/hotels';
 import Navigation from '../components/Navigation';
 import { useTranslation } from 'react-i18next';
 
 export default function HotelDetail() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const lang = i18n.language as 'es' | 'en';
   const hotel = hotelsData.find(h => h.slug === slug);
+
+  const toISODate = (date: Date) =>
+    `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+
+  const today = new Date();
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    checkIn: '',
-    checkOut: '',
+    checkIn: toISODate(today),
+    checkOut: toISODate(tomorrow),
     guests: '1',
     message: ''
   });
@@ -24,12 +32,12 @@ export default function HotelDetail() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Hotel no encontrado</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('hotel.notFound')}</h1>
           <button
             onClick={() => navigate(`/${lang}`)}
             className="text-blue-500 hover:text-blue-600 font-semibold"
           >
-            Volver al inicio
+            {t('hotel.backHome')}
           </button>
         </div>
       </div>
@@ -56,13 +64,15 @@ export default function HotelDetail() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const messageText = `Hola, me interesa el ${hotel.name}.
-Nombre: ${formData.name}
-Email: ${formData.email}
-Fecha de entrada: ${formData.checkIn}
-Fecha de salida: ${formData.checkOut}
-Número de huéspedes: ${formData.guests}
-Mensaje: ${formData.message}`;
+    const messageText = t('hotel.whatsappMessage', {
+      hotel: hotel.name,
+      name: formData.name,
+      email: formData.email,
+      checkIn: formData.checkIn,
+      checkOut: formData.checkOut,
+      guests: formData.guests,
+      message: formData.message
+    });
 
     const encodedMessage = encodeURIComponent(messageText);
     const whatsappUrl = `https://wa.me/${hotel.whatsappNumber}?text=${encodedMessage}`;
@@ -79,7 +89,7 @@ Mensaje: ${formData.message}`;
           className="flex items-center space-x-2 px-6 py-4 text-blue-500 hover:text-blue-600 font-semibold transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
-          <span>Volver</span>
+          <span>{t('hotel.back')}</span>
         </button>
 
         <div className="grid md:grid-cols-2 gap-8 px-6 md:px-12 py-8">
@@ -93,12 +103,12 @@ Mensaje: ${formData.message}`;
             </div>
 
             <div className="mt-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Solicita Información</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('hotel.requestTitle')}</h2>
 
               <form onSubmit={handleSubmit}>
                 <div className="grid gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">Nombre</label>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">{t('hotel.nameLabel')}</label>
                     <input
                       type="text"
                       name="name"
@@ -106,11 +116,11 @@ Mensaje: ${formData.message}`;
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Tu nombre"
+                      placeholder={t('hotel.namePlaceholder')}
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">Email</label>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">{t('hotel.emailLabel')}</label>
                     <input
                       type="email"
                       name="email"
@@ -118,14 +128,14 @@ Mensaje: ${formData.message}`;
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="tu@email.com"
+                      placeholder={t('hotel.emailPlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div className="grid gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">Entrada</label>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">{t('hotel.checkInLabel')}</label>
                     <input
                       type="date"
                       name="checkIn"
@@ -136,7 +146,7 @@ Mensaje: ${formData.message}`;
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">Salida</label>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">{t('hotel.checkOutLabel')}</label>
                     <input
                       type="date"
                       name="checkOut"
@@ -147,7 +157,7 @@ Mensaje: ${formData.message}`;
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">Huéspedes</label>
+                    <label className="block text-sm font-semibold text-gray-900 mb-2">{t('hotel.guestsLabel')}</label>
                     <input
                       type="number"
                       name="guests"
@@ -160,14 +170,14 @@ Mensaje: ${formData.message}`;
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">Mensaje adicional</label>
+                  <label className="block text-sm font-semibold text-gray-900 mb-2">{t('hotel.messageLabel')}</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Cuéntanos qué necesitas..."
+                    placeholder={t('hotel.messagePlaceholder')}
                   ></textarea>
                 </div>
 
@@ -176,7 +186,7 @@ Mensaje: ${formData.message}`;
                   className="w-full bg-blue-500 text-white py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-blue-600 transition-colors text-lg"
                 >
                   <Send className="w-5 h-5" />
-                  <span>Enviar por WhatsApp</span>
+                  <span>{t('hotel.requestQuote')}</span>
                 </button>
               </form>
             </div>
@@ -202,54 +212,54 @@ Mensaje: ${formData.message}`;
             </div>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              {hotel.fullDescription}
+              {hotel.fullDescription[lang]}
             </p>
 
             <div className="bg-blue-50 rounded-xl p-6 mb-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Información del Hotel</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">{t('hotel.infoTitle')}</h3>
               <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                 {hotel.category && (
                   <div>
-                    <span className="font-semibold text-gray-900">Categoría:</span>
-                    <span className="text-gray-600 ml-2">{hotel.category}</span>
+                    <span className="font-semibold text-gray-900">{t('hotel.category')}</span>
+                    <span className="text-gray-600 ml-2">{hotel.category[lang]}</span>
                   </div>
                 )}
                 {hotel.type && (
                   <div>
-                    <span className="font-semibold text-gray-900">Tipo:</span>
-                    <span className="text-gray-600 ml-2">{hotel.type}</span>
+                    <span className="font-semibold text-gray-900">{t('hotel.type')}</span>
+                    <span className="text-gray-600 ml-2">{hotel.type[lang]}</span>
                   </div>
                 )}
                 {hotel.checkIn && (
                   <div>
-                    <span className="font-semibold text-gray-900">Check In:</span>
+                    <span className="font-semibold text-gray-900">{t('hotel.checkInTime')}</span>
                     <span className="text-gray-600 ml-2">{hotel.checkIn}</span>
                   </div>
                 )}
                 {hotel.checkOut && (
                   <div>
-                    <span className="font-semibold text-gray-900">Check Out:</span>
+                    <span className="font-semibold text-gray-900">{t('hotel.checkOutTime')}</span>
                     <span className="text-gray-600 ml-2">{hotel.checkOut}</span>
                   </div>
                 )}
                 {hotel.minStay && (
                   <div>
-                    <span className="font-semibold text-gray-900">Estadía Mínima:</span>
-                    <span className="text-gray-600 ml-2">{hotel.minStay}</span>
+                    <span className="font-semibold text-gray-900">{t('hotel.minStay')}</span>
+                    <span className="text-gray-600 ml-2">{hotel.minStay[lang]}</span>
                   </div>
                 )}
               </div>
             </div>
 
             <div className="bg-blue-50 rounded-xl p-6 mb-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Servicios</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">{t('hotel.services')}</h3>
               <div className="grid grid-cols-3 gap-4">
                 {hotel.amenities.map((amenity) => {
                   const Icon = amenityIcons[amenity as keyof typeof amenityIcons] || Wifi;
                   return (
                     <div key={amenity} className="flex flex-col items-center">
                       <Icon className="w-8 h-8 text-blue-500 mb-2" />
-                      <span className="text-sm text-gray-600 text-center">{amenity}</span>
+                      <span className="text-sm text-gray-600 text-center">{lang === 'en' ? (amenityLabelsEn[amenity] ?? amenity) : amenity}</span>
                     </div>
                   );
                 })}
@@ -258,14 +268,14 @@ Mensaje: ${formData.message}`;
 
             {hotel.rooms && hotel.rooms.length > 0 && (
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Habitaciones</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">{t('hotel.rooms')}</h3>
                 {hotel.rooms.map((room, index) => (
                   <div key={index} className="mb-4 last:mb-0">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-semibold text-gray-900">{room.name}</h4>
-                      <span className="text-blue-600 font-bold">{room.price}</span>
+                      <h4 className="font-semibold text-gray-900">{room.name[lang]}</h4>
+                      <span className="text-blue-600 font-bold">{room.price[lang]}</span>
                     </div>
-                    <p className="text-sm text-gray-600 leading-relaxed">{room.description}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{room.description[lang]}</p>
                   </div>
                 ))}
               </div>

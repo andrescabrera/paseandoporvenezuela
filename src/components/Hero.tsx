@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export default function Hero() {
+  const { t } = useTranslation();
 
   return (
     <div className="relative h-screen">
@@ -16,23 +19,23 @@ export default function Hero() {
         <div className="pt-20 flex-1 flex items-center justify-center px-6">
           <div className="text-center max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Descubre la Isla de Margarita
+              {t('home.heroTitle')}
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Tu paraíso caribeño te espera. Playas cristalinas, cultura vibrante y hoteles exclusivos.
+              {t('home.heroSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#hotels"
                 className="bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 transform hover:scale-105 transition-all shadow-lg"
               >
-                Ver Hoteles
+                {t('home.ctaHotels')}
               </a>
               <a
                 href="#about"
                 className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all border-2 border-white"
               >
-                Conoce Más
+                {t('home.ctaAbout')}
               </a>
             </div>
           </div>
