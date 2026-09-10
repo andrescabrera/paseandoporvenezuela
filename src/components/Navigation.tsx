@@ -77,7 +77,7 @@ export default function Navigation() {
 
             {/* Instagram Link */}
             <a
-              href="https://www.instagram.com/paseandoporvenezuela"
+              href="https://www.instagram.com/andres.margarita.travel"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all ${
@@ -129,7 +129,7 @@ export default function Navigation() {
               </div>
 
               <a
-                href="https://www.instagram.com/paseandoporvenezuela"
+                href="https://www.instagram.com/andres.margarita.travel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"

@@ -77,13 +77,13 @@ export default function Blog() {
         <meta property="og:description" content={t('blog.metaDescription')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://paseandoporvenezuela.com/${lang}/blog`} />
-        <meta property="og:image" content="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+        <meta property="og:image" content={blogPosts[0].image} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('blog.title')} />
         <meta name="twitter:description" content={t('blog.metaDescription')} />
-        <meta name="twitter:image" content="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+        <meta name="twitter:image" content={blogPosts[0].image} />
         
         {/* Alternate languages */}
         <link rel="alternate" hrefLang="es" href="https://paseandoporvenezuela.com/es/blog" />
@@ -102,7 +102,7 @@ export default function Blog() {
         <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 py-24 md:py-32">
           <div className="absolute inset-0 overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1920"
+              src={blogPosts[0].image}
               alt="Blog Hero"
               className="w-full h-full object-cover opacity-20"
             />

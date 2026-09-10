@@ -10,12 +10,19 @@ export interface BlogPostTranslation {
   author: string;
 }
 
+export interface BlogImageCredit {
+  author: string;
+  license: string;
+  source: string;
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
   category: BlogCategory;
   image: string;
   images?: string[];
+  imageCredits?: BlogImageCredit[];
   publishedAt: string;
   updatedAt?: string;
   readingTime: number;
@@ -25,16 +32,46 @@ export interface BlogPost {
   };
 }
 
+/**
+ * Fotografías reales de los lugares mencionados, obtenidas de Wikimedia Commons
+ * y almacenadas localmente en /public/images/blog (sin dependencia externa).
+ * Las obras con licencia CC BY / CC BY-SA se acreditan en `imageCredits`;
+ * las CC0 no requieren atribución.
+ */
+const IMG = {
+  playaElAgua: '/images/blog/playa-el-agua.jpg',
+  parguito: '/images/blog/playa-parguito.jpg',
+  guacuco: '/images/blog/playa-guacuco.jpg',
+  yaqueKite: '/images/blog/playa-el-yaque-kitesurf.jpg',
+  caracola: '/images/blog/la-caracola.jpg',
+  pabellon: '/images/blog/pabellon-criollo-margariteno.jpg',
+  cazon: '/images/blog/cazon.jpg',
+  arepas: '/images/blog/arepas.jpg',
+  tostones: '/images/blog/tostones-con-camarones.jpg',
+  quesillo: '/images/blog/quesillo.jpg',
+  castilloSantaRosa: '/images/blog/castillo-santa-rosa.jpg',
+  juanGriegoSunset: '/images/blog/juan-griego-atardecer.jpg',
+  restinga: '/images/blog/laguna-la-restinga.jpg',
+};
+
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
     slug: 'mejores-playas-isla-margarita',
     category: 'beaches',
-    image: 'https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    images: [
-      'https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: IMG.playaElAgua,
+    images: [IMG.playaElAgua, IMG.parguito, IMG.guacuco, IMG.yaqueKite, IMG.caracola],
+    imageCredits: [
+      {
+        author: 'Andrés Jorge',
+        license: 'CC BY-SA 3.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Playa_Parguito,_Margarita.JPG',
+      },
+      {
+        author: 'Enzo861',
+        license: 'CC BY-SA 3.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Playa_Guacuco_-_Nva._Esparta.JPG',
+      },
     ],
     publishedAt: '2024-01-15',
     readingTime: 6,
@@ -125,11 +162,24 @@ export const blogPosts: BlogPost[] = [
     id: '2',
     slug: 'gastronomia-margarita-imprescindible',
     category: 'gastronomy',
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    images: [
-      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/699544/pexels-photo-699544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: IMG.pabellon,
+    images: [IMG.pabellon, IMG.cazon, IMG.arepas, IMG.tostones, IMG.quesillo],
+    imageCredits: [
+      {
+        author: 'Wilfredor',
+        license: 'CC BY-SA 3.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Pabell%C3%B3n_Criollo_Margarite%C3%B1o.jpg',
+      },
+      {
+        author: 'Juan Emilio Prades Bel',
+        license: 'CC BY 4.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Caz%C3%B3n_en_adobo,_rebozado_y_frito.jpg',
+      },
+      {
+        author: 'Arlene Campusano',
+        license: 'CC BY-SA 4.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Tostones_rellenos_con_camarones.jpg',
+      },
     ],
     publishedAt: '2024-02-01',
     readingTime: 5,
@@ -206,11 +256,14 @@ export const blogPosts: BlogPost[] = [
     id: '3',
     slug: 'que-hacer-margarita-7-dias',
     category: 'activities',
-    image: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    images: [
-      'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: IMG.juanGriegoSunset,
+    images: [IMG.juanGriegoSunset, IMG.playaElAgua, IMG.yaqueKite, IMG.castilloSantaRosa, IMG.restinga],
+    imageCredits: [
+      {
+        author: 'Luis Rafael Ortuño Padilla',
+        license: 'CC BY-SA 2.0',
+        source: 'https://commons.wikimedia.org/wiki/File:Castillo_de_Santa_Rosa.jpg',
+      },
     ],
     publishedAt: '2024-02-20',
     readingTime: 8,

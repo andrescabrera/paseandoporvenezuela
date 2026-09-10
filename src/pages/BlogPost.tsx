@@ -250,6 +250,25 @@ export default function BlogPost() {
                   />
                 ))}
               </div>
+              {post.imageCredits && post.imageCredits.length > 0 && (
+                <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+                  {lang === 'es' ? 'Créditos de fotos: ' : 'Photo credits: '}
+                  {post.imageCredits.map((credit, index) => (
+                    <span key={credit.source}>
+                      {index > 0 && ' · '}
+                      <a
+                        href={credit.source}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-gray-700"
+                      >
+                        {credit.author}
+                      </a>{' '}
+                      ({credit.license}, Wikimedia Commons)
+                    </span>
+                  ))}
+                </p>
+              )}
             </div>
           )}
         </div>

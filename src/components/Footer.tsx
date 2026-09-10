@@ -31,7 +31,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">{t('footer.contact')}</h3>
             <div className="space-y-3">
               <a
-                href="https://www.instagram.com/paseandoporvenezuela"
+                href="https://www.instagram.com/andres.margarita.travel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
