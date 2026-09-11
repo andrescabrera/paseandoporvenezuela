@@ -127,11 +127,13 @@ export default function BlogPost() {
   return (
     <>
       <Helmet>
+        <html lang={lang} />
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
         <meta name="keywords" content={content.metaKeywords} />
         <meta name="author" content={content.author} />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href={`https://paseandoporvenezuela.com/${lang}/blog/${post.slug}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={content.metaTitle} />

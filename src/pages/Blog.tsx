@@ -68,9 +68,11 @@ export default function Blog() {
   return (
     <>
       <Helmet>
+        <html lang={lang} />
         <title>{t('blog.title')} | Paseando por Venezuela</title>
         <meta name="description" content={t('blog.metaDescription')} />
         <meta name="keywords" content={t('blog.metaKeywords')} />
+        <link rel="canonical" href={`https://paseandoporvenezuela.com/${lang}/blog`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={t('blog.title')} />

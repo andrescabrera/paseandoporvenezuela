@@ -1,5 +1,7 @@
-import type { Hotel, HotelRoom } from '../data/hotels';
+import type { Hotel, HotelRoom, Localized } from '../data/hotels';
 import { hotelTranslationsEN, type HotelTranslation } from '../data/hotelTranslations';
+import { tourTranslationsEN, tourFeatureLabelsEN } from '../data/tourTranslations';
+import { attractionTranslationsEN, attractionFeatureLabelsEN } from '../data/attractionTranslations';
 
 const API_BASE = 'https://www.venetravel.com/api';
 const IMG_BASE = 'https://www.venetravel.com';
@@ -142,10 +144,10 @@ function capitalizeFirst(value: string): string {
   return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 }
 
-/** Precio en USD con coma decimal latina: 140 -> "$140,00". */
+/** Precio en USD con coma decimal latina: 140 -> "$140,00", 2324 -> "$2.324,00". */
 export function formatUsdLatin(amount?: number): string {
   if (typeof amount !== 'number' || !Number.isFinite(amount) || amount <= 0) return '';
-  return `$${amount.toFixed(2).replace('.', ',')}`;
+  return `$${new Intl.NumberFormat('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(amount)}`;
 }
 
 function clampRating(external?: number): number {
@@ -359,3 +361,270 @@ export async function quoteHotel(params: QuoteParams): Promise<HotelQuote> {
   }
   return json as HotelQuote;
 }
+
+/* ======================== TOURS & ATTRACTIONS ======================== */
+
+interface RawOfferFeature {
+  id: string | number;
+  name: string;
+}
+
+interface RawOfferPrices {
+  adult_bs?: string | number;
+  adult_usd?: string | number;
+  child_bs?: string | number;
+  child_usd?: string | number;
+}
+
+interface RawOfferDate {
+  start: string;
+  end: string;
+  prices?: RawOfferPrices;
+}
+
+interface RawOffer {
+  id: number;
+  name?: string;
+  destination?: string;
+  description?: string;
+  duration_id?: number;
+  type_id?: number;
+  image?: string;
+  price_from?: number;
+  currency_id?: number;
+  features?: RawOfferFeature[];
+  duration?: { id: number; name: string };
+  type?: { id: number; name: string };
+  images?: string[];
+  main_image?: string;
+  available_dates?: RawOfferDate[];
+  // Solo atracciones
+  address?: string;
+  recomendaciones?: string;
+  tyc?: string;
+}
+
+export interface OfferDate {
+  /** Fecha ISO (YYYY-MM-DD). */
+  start: string;
+  end: string;
+  adultUsd: number | null;
+  childUsd: number | null;
+}
+
+export interface Offer {
+  id: number;
+  slug: string;
+  name: Localized;
+  destination: Localized;
+  description: Localized;
+  duration: Localized;
+  type: Localized;
+  features: Localized[];
+  image: string;
+  images: string[];
+  priceFromUsd: number;
+  price: string;
+  dates: OfferDate[];
+  address?: string;
+}
+
+export interface OfferQuote {
+  precio_format: string;
+  precio_int: number;
+  adultos?: number;
+  ninos?: number;
+}
+
+export interface OfferQuoteParams {
+  id: number;
+  fecha: string;
+  adultos: number;
+  ninos?: number;
+  selectivos?: string[];
+}
+
+type OfferTranslation = {
+  name?: string;
+  destination?: string;
+  description?: string;
+  duration?: string;
+  type?: string;
+};
+
+function parseUsd(value: unknown): number | null {
+  const n = Number(value);
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+/** dd-mm-yyyy (formato de venetravel) a ISO yyyy-mm-dd. */
+function dmyToIso(value: string): string {
+  const m = /^(\d{2})-(\d{2})-(\d{4})$/.exec(cleanText(value));
+  return m ? `${m[3]}-${m[2]}-${m[1]}` : '';
+}
+
+function isPlaceholderDescription(text: string): boolean {
+  return /^descripci[oó]n del tours?$/i.test(text.trim());
+}
+
+/** Deduplica pares .jpg/.webp (conserva la primera variante). */
+function dedupeImages(paths: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const p of paths) {
+    const url = absImage(p);
+    if (!url) continue;
+    const key = url.replace(/\.(webp|jpe?g|png)$/i, '').toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(url);
+  }
+  return out;
+}
+
+function mapOffer(
+  raw: RawOffer,
+  translation: OfferTranslation | undefined,
+  featureDict: Record<string, string>,
+  isDetail: boolean,
+): Offer {
+  const nameEs = cleanText(raw.name) || `Tour ${raw.id}`;
+  const destEs = cleanText(raw.destination);
+  const descEsRaw = cleanText(raw.description);
+  const descEs = isPlaceholderDescription(descEsRaw) ? '' : descEsRaw;
+  const durationEs = cleanText(raw.duration?.name || '');
+  const typeEs = cleanText(raw.type?.name || '');
+
+  const features: Localized[] = (raw.features || [])
+    .map((f) => cleanText(f.name))
+    .filter(Boolean)
+    .map((n) => ({ es: n, en: featureDict[n] || n }));
+
+  const images = isDetail ? dedupeImages(raw.images || []) : [];
+
+  const dates: OfferDate[] = isDetail && Array.isArray(raw.available_dates)
+    ? raw.available_dates
+        .map((d) => ({
+          start: dmyToIso(d.start),
+          end: dmyToIso(d.end),
+          adultUsd: parseUsd(d.prices?.adult_usd),
+          childUsd: parseUsd(d.prices?.child_usd),
+        }))
+        .filter((d) => d.start && d.end)
+    : [];
+
+  const fromList = Number(raw.price_from);
+  const dateMin = dates.reduce(
+    (min, d) => (d.adultUsd != null && d.adultUsd < min ? d.adultUsd : min),
+    Infinity,
+  );
+  const priceFromUsd = fromList > 0 ? fromList : Number.isFinite(dateMin) ? dateMin : 0;
+
+  return {
+    id: raw.id,
+    slug: slugify(nameEs, raw.id),
+    name: { es: nameEs, en: translation?.name || nameEs },
+    destination: { es: destEs || 'Venezuela', en: translation?.destination || destEs || 'Venezuela' },
+    description: { es: descEs, en: translation?.description || descEs },
+    duration: { es: durationEs, en: translation?.duration || durationEs },
+    type: { es: typeEs, en: translation?.type || typeEs },
+    features,
+    image: absImage(raw.main_image || raw.image) || images[0] || '',
+    images,
+    priceFromUsd,
+    price: formatUsdLatin(priceFromUsd) || 'Consultar',
+    dates,
+    address: cleanText(raw.address) || undefined,
+  };
+}
+
+let toursPromise: Promise<Offer[]> | null = null;
+
+async function loadTours(): Promise<Offer[]> {
+  const json = await getJson<ApiEnvelope<RawOffer[]>>(`${API_BASE}/tours?limit=200`);
+  if (!json || json.success !== 1 || !Array.isArray(json.data)) {
+    throw new Error('Respuesta inesperada del catálogo de tours');
+  }
+  return json.data
+    .map((t) => mapOffer(t, tourTranslationsEN[t.id], tourFeatureLabelsEN, false))
+    .filter((o) => Boolean(o.name.es))
+    .sort((a, b) => a.name.es.localeCompare(b.name.es, 'es'));
+}
+
+/** Catálogo de tours con caché en memoria. */
+export function getTours(): Promise<Offer[]> {
+  if (!toursPromise) {
+    toursPromise = loadTours().catch((err) => {
+      toursPromise = null;
+      throw err;
+    });
+  }
+  return toursPromise;
+}
+
+/** Detalle de un tour por id (incluye galería y fechas/precios). */
+export async function getTourDetail(id: number): Promise<Offer> {
+  const json = await getJson<ApiEnvelope<RawOffer>>(`${API_BASE}/tours/${id}`);
+  if (!json || json.success !== 1 || !json.data) throw new Error(`No se encontró el tour ${id}`);
+  return mapOffer(json.data, tourTranslationsEN[id], tourFeatureLabelsEN, true);
+}
+
+let attractionsPromise: Promise<Offer[]> | null = null;
+
+async function loadAttractions(): Promise<Offer[]> {
+  const json = await getJson<ApiEnvelope<RawOffer[]>>(`${API_BASE}/attractions?limit=200`);
+  if (!json || json.success !== 1 || !Array.isArray(json.data)) {
+    throw new Error('Respuesta inesperada del catálogo de atracciones');
+  }
+  return json.data
+    .map((a) => mapOffer(a, attractionTranslationsEN[a.id], attractionFeatureLabelsEN, false))
+    .filter((o) => Boolean(o.name.es))
+    .sort((a, b) => a.name.es.localeCompare(b.name.es, 'es'));
+}
+
+/** Catálogo de atracciones con caché en memoria. */
+export function getAttractions(): Promise<Offer[]> {
+  if (!attractionsPromise) {
+    attractionsPromise = loadAttractions().catch((err) => {
+      attractionsPromise = null;
+      throw err;
+    });
+  }
+  return attractionsPromise;
+}
+
+/** Detalle de una atracción por id. */
+export async function getAttractionDetail(id: number): Promise<Offer> {
+  const json = await getJson<ApiEnvelope<RawOffer>>(`${API_BASE}/attractions/${id}`);
+  if (!json || json.success !== 1 || !json.data) throw new Error(`No se encontró la atracción ${id}`);
+  return mapOffer(json.data, attractionTranslationsEN[id], attractionFeatureLabelsEN, true);
+}
+
+async function quoteOffer(kind: 'tour' | 'atraccion', params: OfferQuoteParams): Promise<OfferQuote> {
+  const body = new URLSearchParams({
+    id: String(params.id),
+    fecha: params.fecha,
+    adultos: String(params.adultos),
+    ninos: String(params.ninos ?? 0),
+    tipo_precio: '1',
+  });
+  for (const s of params.selectivos ?? []) body.append('selectivos[]', s);
+
+  const res = await fetch(`${API_BASE}/cotizar/${kind}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded', Accept: 'application/json' },
+    body: body.toString(),
+  });
+  if (!res.ok) throw new Error(`Cotización ${res.status}`);
+  const json = (await res.json()) as { success?: number; message?: string; precio_format?: string; precio_int?: number };
+  if (!json || json.success === 0 || !json.precio_format) {
+    throw new Error(json?.message || 'No se pudo cotizar');
+  }
+  return json as OfferQuote;
+}
+
+/** Cotización real de un tour (USD). */
+export const quoteTour = (params: OfferQuoteParams) => quoteOffer('tour', params);
+
+/** Cotización real de una atracción (USD). */
+export const quoteAttraction = (params: OfferQuoteParams) => quoteOffer('atraccion', params);

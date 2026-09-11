@@ -9,6 +9,8 @@ import ScrollToTop from './components/ScrollToTop';
 import './i18n';
 
 const Restaurants = lazy(() => import('./pages/Restaurants'));
+const OffersList = lazy(() => import('./pages/OffersList'));
+const OfferDetail = lazy(() => import('./pages/OfferDetail'));
 
 function PageLoader() {
   return (
@@ -32,6 +34,10 @@ function App() {
           <Route path="/es" element={<Landing />} />
           <Route path="/es/hoteles/:slug" element={<HotelDetail />} />
           <Route path="/es/restaurantes" element={<Restaurants />} />
+          <Route path="/es/tours" element={<OffersList kind="tour" />} />
+          <Route path="/es/tours/:slug" element={<OfferDetail kind="tour" />} />
+          <Route path="/es/atracciones" element={<OffersList kind="attraction" />} />
+          <Route path="/es/atracciones/:slug" element={<OfferDetail kind="attraction" />} />
           <Route path="/es/blog" element={<Blog />} />
           <Route path="/es/blog/:slug" element={<BlogPost />} />
           
@@ -39,6 +45,10 @@ function App() {
           <Route path="/en" element={<Landing />} />
           <Route path="/en/hoteles/:slug" element={<HotelDetail />} />
           <Route path="/en/restaurants" element={<Restaurants />} />
+          <Route path="/en/tours" element={<OffersList kind="tour" />} />
+          <Route path="/en/tours/:slug" element={<OfferDetail kind="tour" />} />
+          <Route path="/en/attractions" element={<OffersList kind="attraction" />} />
+          <Route path="/en/attractions/:slug" element={<OfferDetail kind="attraction" />} />
           <Route path="/en/blog" element={<Blog />} />
           <Route path="/en/blog/:slug" element={<BlogPost />} />
           

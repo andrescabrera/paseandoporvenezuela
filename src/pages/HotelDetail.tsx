@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Star, MapPin, Send, Loader2 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import { useTranslation } from 'react-i18next';
@@ -62,6 +63,8 @@ export default function HotelDetail() {
     setActiveImage(0);
   }, [hotel?.id]);
 
+  const quotePrice = quote && /\d/.test(quote.price_format) ? quote.price_format : null;
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
@@ -89,7 +92,7 @@ export default function HotelDetail() {
       checkIn: formData.checkIn,
       checkOut: formData.checkOut,
       guests: formData.guests,
-      price: quote?.price_format ?? t('hotel.priceOnRequest'),
+      price: quotePrice ?? t('hotel.priceOnRequest'),
       message: formData.message,
     });
 
@@ -133,9 +136,55 @@ export default function HotelDetail() {
   }
 
   const gallery = hotel.images && hotel.images.length > 0 ? hotel.images : [hotel.image];
+  const canonical = `https://paseandoporvenezuela.com/${lang}/hoteles/${hotel.slug}`;
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <html lang={lang} />
+        <title>{`${hotel.name} | ${hotel.location} - Paseando por Venezuela`}</title>
+        <meta name="description" content={(hotel.fullDescription[lang] || hotel.name).slice(0, 158)} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content={hotel.name} />
+        <meta property="og:description" content={(hotel.fullDescription[lang] || hotel.name).slice(0, 158)} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={hotel.image} />
+        <meta property="og:url" content={canonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={hotel.name} />
+        <meta name="twitter:image" content={hotel.image} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: t('nav.home'), item: `https://paseandoporvenezuela.com/${lang}` },
+                  { '@type': 'ListItem', position: 2, name: t('nav.hotels'), item: `https://paseandoporvenezuela.com/${lang}#hotels` },
+                  { '@type': 'ListItem', position: 3, name: hotel.name, item: canonical },
+                ],
+              },
+              {
+                '@type': 'Hotel',
+                name: hotel.name,
+                image: hotel.image,
+                description: hotel.fullDescription[lang],
+                url: canonical,
+                address: {
+                  '@type': 'PostalAddress',
+                  streetAddress: hotel.address || hotel.location,
+                  addressLocality: hotel.city || hotel.location,
+                  addressCountry: 'VE',
+                },
+                starRating: { '@type': 'Rating', ratingValue: hotel.rating },
+                priceRange: hotel.price,
+                telephone: `+${hotel.whatsappNumber}`,
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
       <Navigation />
       <div className="max-w-7xl mx-auto pt-20">
         <button
@@ -247,10 +296,10 @@ export default function HotelDetail() {
                       <span>{t('hotel.quoteCalculating')}</span>
                     </div>
                   )}
-                  {!quoting && quote && (
+                  {!quoting && quotePrice && quote && (
                     <div>
                       <div className="flex items-baseline justify-between">
-                        <span className="text-3xl font-bold text-blue-600">{quote.price_format}</span>
+                        <span className="text-3xl font-bold text-blue-600">{quotePrice}</span>
                         <span className="text-sm text-gray-600">
                           {t('hotel.quoteTotal', { count: quote.noches })}
                         </span>
@@ -260,9 +309,9 @@ export default function HotelDetail() {
                       </p>
                     </div>
                   )}
-                  {!quoting && !quote && (
+                  {!quoting && !quotePrice && (
                     <p className="text-sm text-gray-600">
-                      {quoteError ? t('hotel.quoteError') : t('hotel.quoteNeedDates')}
+                      {quote || quoteError ? t('hotel.quoteError') : t('hotel.quoteNeedDates')}
                     </p>
                   )}
                 </div>
@@ -301,7 +350,7 @@ export default function HotelDetail() {
               </div>
               <div className="text-right">
                 <div className="text-3xl font-bold text-blue-500 mb-2">
-                  {quote?.price_format ?? hotel.price}
+                  {quotePrice ?? hotel.price}
                 </div>
                 <div className="flex justify-end">
                   {[...Array(hotel.rating)].map((_, i) => (

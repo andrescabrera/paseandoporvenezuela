@@ -68,13 +68,29 @@ export default function Restaurants() {
   return (
     <>
       <Helmet>
+        <html lang={lang} />
         <title>{t('restaurants.metaTitle')}</title>
         <meta name="description" content={t('restaurants.metaDescription')} />
         <meta property="og:title" content={t('restaurants.metaTitle')} />
         <meta property="og:description" content={t('restaurants.metaDescription')} />
         <meta property="og:type" content="website" />
+        <link rel="canonical" href={`https://paseandoporvenezuela.com/${lang}/${lang === 'es' ? 'restaurantes' : 'restaurants'}`} />
         <link rel="alternate" hrefLang="es" href="https://paseandoporvenezuela.com/es/restaurantes" />
         <link rel="alternate" hrefLang="en" href="https://paseandoporvenezuela.com/en/restaurants" />
+        <link rel="alternate" hrefLang="x-default" href="https://paseandoporvenezuela.com/es/restaurantes" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: t('restaurants.title'),
+            itemListElement: restaurants.map((r, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              name: r.name,
+              url: `https://paseandoporvenezuela.com/${lang}/${lang === 'es' ? 'restaurantes' : 'restaurants'}#${r.id}`,
+            })),
+          })}
+        </script>
       </Helmet>
 
       <Navigation />
@@ -137,6 +153,7 @@ export default function Restaurants() {
                   return (
                     <article
                       key={restaurant.id}
+                      id={restaurant.id}
                       onClick={() => setSelectedId(restaurant.id)}
                       className={`rounded-2xl border bg-white p-5 transition-all cursor-pointer ${
                         isSelected ? 'border-blue-500 shadow-lg ring-1 ring-blue-200' : 'border-gray-200 shadow-sm hover:shadow-md'

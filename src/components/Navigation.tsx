@@ -1,4 +1,4 @@
-import { MapPin, Instagram, Menu, X, Hotel, BookOpen, Home, UtensilsCrossed } from 'lucide-react';
+import { MapPin, Instagram, Menu, X, Hotel, BookOpen, Home, UtensilsCrossed, Compass, FerrisWheel } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -27,6 +27,8 @@ export default function Navigation() {
     { to: `/${lang}`, label: t('nav.home'), icon: Home },
     { to: `/${lang}/blog`, label: t('nav.blog'), icon: BookOpen },
     { to: `/${lang}/restaurantes`, label: t('nav.restaurants'), icon: UtensilsCrossed },
+    { to: `/${lang}/tours`, label: t('nav.tours'), icon: Compass },
+    { to: `/${lang}/${lang === 'en' ? 'attractions' : 'atracciones'}`, label: t('nav.attractions'), icon: FerrisWheel },
     { to: `/${lang}#hotels`, label: t('nav.hotels'), icon: Hotel },
   ];
 
