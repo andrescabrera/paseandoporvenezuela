@@ -31,3 +31,27 @@
     animation: scaleIn 0.3s ease-out;
   }
 }
+
+/* Marcadores del mapa de restaurantes (Leaflet divIcon) */
+.restaurant-marker__pin {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 5px;
+  background: #2563eb;
+  border: 3px solid #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.restaurant-marker__pin--active {
+  background: #f97316;
+  transform: scale(1.35);
+}
+
+.leaflet-container {
+  font-family: inherit;
+  z-index: 0;
+}
+

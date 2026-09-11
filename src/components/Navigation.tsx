@@ -1,4 +1,4 @@
-import { MapPin, Instagram, Menu, X, Hotel, BookOpen, Home } from 'lucide-react';
+import { MapPin, Instagram, Menu, X, Hotel, BookOpen, Home, UtensilsCrossed } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -26,6 +26,7 @@ export default function Navigation() {
   const navLinks = [
     { to: `/${lang}`, label: t('nav.home'), icon: Home },
     { to: `/${lang}/blog`, label: t('nav.blog'), icon: BookOpen },
+    { to: `/${lang}/restaurantes`, label: t('nav.restaurants'), icon: UtensilsCrossed },
     { to: `/${lang}#hotels`, label: t('nav.hotels'), icon: Hotel },
   ];
 
@@ -87,7 +88,7 @@ export default function Navigation() {
               }`}
             >
               <Instagram className="w-5 h-5" />
-              <span className="hidden lg:inline text-sm">@paseandoporvenezuela</span>
+              <span className="hidden lg:inline text-sm">@andres.margarita.travel</span>
             </a>
           </div>
 
@@ -135,7 +136,7 @@ export default function Navigation() {
                 className="flex items-center gap-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
-                @paseandoporvenezuela
+                @andres.margarita.travel
               </a>
             </div>
           </div>

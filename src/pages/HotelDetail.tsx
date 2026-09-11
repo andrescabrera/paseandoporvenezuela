@@ -9,6 +9,22 @@ import { getAmenityIcon, amenityLabel } from '../lib/amenityIcons';
 const toISODate = (date: Date) =>
   `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 
+/** Diferencia en días entre dos fechas ISO (YYYY-MM-DD). */
+const diffDaysISO = (fromISO: string, toISO: string): number => {
+  const [y1, m1, d1] = fromISO.split('-').map(Number);
+  const [y2, m2, d2] = toISO.split('-').map(Number);
+  if ([y1, m1, d1, y2, m2, d2].some((n) => !Number.isFinite(n))) return NaN;
+  return Math.round((Date.UTC(y2, m2 - 1, d2) - Date.UTC(y1, m1 - 1, d1)) / 86400000);
+};
+
+/** Suma días a una fecha ISO (YYYY-MM-DD) preservando el calendario. */
+const addDaysISO = (iso: string, days: number): string => {
+  const [y, m, d] = iso.split('-').map(Number);
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  dt.setUTCDate(dt.getUTCDate() + days);
+  return `${dt.getUTCFullYear()}-${String(dt.getUTCMonth() + 1).padStart(2, '0')}-${String(dt.getUTCDate()).padStart(2, '0')}`;
+};
+
 export default function HotelDetail() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -48,6 +64,17 @@ export default function HotelDetail() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    // Al cambiar la Entrada, desplaza la Salida manteniendo el intervalo de días.
+    if (name === 'checkIn') {
+      setFormData((prev) => {
+        const interval = diffDaysISO(prev.checkIn, prev.checkOut);
+        const safeInterval = Number.isFinite(interval) && interval > 0 ? interval : 1;
+        return { ...prev, checkIn: value, checkOut: addDaysISO(value, safeInterval) };
+      });
+      return;
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
