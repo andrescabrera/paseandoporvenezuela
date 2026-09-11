@@ -1,159 +1,796 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- Homepage - Spanish (Default) -->
   <url>
     <loc>https://paseandoporvenezuela.com/es</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es"/>
-    <lastmod>2024-02-20</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Homepage - English -->
   <url>
     <loc>https://paseandoporvenezuela.com/en</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es"/>
-    <lastmod>2024-02-20</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Restaurants - Spanish -->
   <url>
     <loc>https://paseandoporvenezuela.com/es/restaurantes</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/restaurantes"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/restaurants"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/restaurantes"/>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Restaurants - English -->
   <url>
     <loc>https://paseandoporvenezuela.com/en/restaurants</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/restaurantes"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/restaurants"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/restaurantes"/>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Blog Index - Spanish -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/atracciones</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/attractions</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://paseandoporvenezuela.com/es/blog</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog"/>
-    <lastmod>2024-02-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog"/>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
-  
-  <!-- Blog Index - English -->
   <url>
     <loc>https://paseandoporvenezuela.com/en/blog</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog"/>
-    <lastmod>2024-02-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog"/>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
-  
-  <!-- Blog Post: Mejores Playas - Spanish -->
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-4-noches-5-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/campamento-tibisay-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-4-noches-5-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/campamento-tibisay-canaima-4-noches-5-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/campamento-tibisay-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-4-noches-5-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-3-noches-4-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/campamento-tibisay-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-3-noches-4-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/campamento-tibisay-canaima-3-noches-4-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/campamento-tibisay-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/campamento-tibisay-canaima-3-noches-4-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-catamaran-infinito</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-catamaran-infinito"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-coche-catamaran-infinito"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-catamaran-infinito"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-isla-de-coche-catamaran-infinito</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-catamaran-infinito"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-coche-catamaran-infinito"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-catamaran-infinito"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-lagunita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-lagunita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-los-roques-posada-lagunita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-lagunita"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-los-roques-posada-lagunita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-lagunita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-los-roques-posada-lagunita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-lagunita"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/h2o-by-ld-hoteles-plan-residente</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/h2o-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/h2o-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/h2o-by-ld-hoteles-plan-residente"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/h2o-by-ld-hoteles-plan-residente</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/h2o-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/h2o-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/h2o-by-ld-hoteles-plan-residente"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/aria-by-ld-hoteles-plan-residente</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/aria-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/aria-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/aria-by-ld-hoteles-plan-residente"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/aria-by-ld-hoteles-plan-residente</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/aria-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/aria-by-ld-hoteles-plan-residente"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/aria-by-ld-hoteles-plan-residente"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-4-noches-5-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/tapuy-lodge-by-ld-canaima-3-noches-4-dias"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-unik-by-sunsol-hoteles</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-unik-by-sunsol-hoteles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-unik-by-sunsol-hoteles"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-unik-by-sunsol-hoteles"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-unik-by-sunsol-hoteles</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-unik-by-sunsol-hoteles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-unik-by-sunsol-hoteles"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-unik-by-sunsol-hoteles"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-sunsol-ecoland</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-ecoland"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-sunsol-ecoland"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-ecoland"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-sunsol-ecoland</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-ecoland"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-sunsol-ecoland"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-ecoland"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/catamaran-odyssea</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/catamaran-odyssea"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/catamaran-odyssea"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/catamaran-odyssea"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/catamaran-odyssea</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/catamaran-odyssea"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/catamaran-odyssea"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/catamaran-odyssea"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-los-roques-hotel-boutique-gran-roque</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-hotel-boutique-gran-roque"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-los-roques-hotel-boutique-gran-roque"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-hotel-boutique-gran-roque"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-los-roques-hotel-boutique-gran-roque</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-hotel-boutique-gran-roque"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-los-roques-hotel-boutique-gran-roque"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-hotel-boutique-gran-roque"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/plan-margariteno-hesperia-playa-el-agua</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/plan-margariteno-hesperia-playa-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/plan-margariteno-hesperia-playa-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/plan-margariteno-hesperia-playa-el-agua"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/plan-margariteno-hesperia-playa-el-agua</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/plan-margariteno-hesperia-playa-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/plan-margariteno-hesperia-playa-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/plan-margariteno-hesperia-playa-el-agua"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/isla-de-cubagua-24-horas-campamento-lodge</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/isla-de-cubagua-24-horas-campamento-lodge"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/isla-de-cubagua-24-horas-campamento-lodge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/isla-de-cubagua-24-horas-campamento-lodge"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/isla-de-cubagua-24-horas-campamento-lodge</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/isla-de-cubagua-24-horas-campamento-lodge"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/isla-de-cubagua-24-horas-campamento-lodge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/isla-de-cubagua-24-horas-campamento-lodge"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-lodge</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-lodge"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-cubagua-lodge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-lodge"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-isla-de-cubagua-lodge</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-lodge"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-cubagua-lodge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-lodge"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-mediterraneo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-mediterraneo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-los-roques-posada-mediterraneo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-mediterraneo"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-los-roques-posada-mediterraneo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-mediterraneo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-los-roques-posada-mediterraneo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-los-roques-posada-mediterraneo"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-con-buceo-en-archipielado-los-frailes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-con-buceo-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-con-buceo-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-con-buceo-en-archipielado-los-frailes"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-con-buceo-en-archipielado-los-frailes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-con-buceo-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-con-buceo-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-con-buceo-en-archipielado-los-frailes"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-con-snorkel-en-archipielado-los-frailes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-con-snorkel-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-con-snorkel-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-con-snorkel-en-archipielado-los-frailes"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-con-snorkel-en-archipielado-los-frailes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-con-snorkel-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-con-snorkel-en-archipielado-los-frailes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-con-snorkel-en-archipielado-los-frailes"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-5-dias-y-4-noches</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-5-dias-y-4-noches"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/waka-wena-canaima-5-dias-y-4-noches"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-5-dias-y-4-noches"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/waka-wena-canaima-5-dias-y-4-noches</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-5-dias-y-4-noches"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/waka-wena-canaima-5-dias-y-4-noches"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-5-dias-y-4-noches"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-4-dias-y-3-noches</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-4-dias-y-3-noches"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/waka-wena-canaima-4-dias-y-3-noches"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-4-dias-y-3-noches"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/waka-wena-canaima-4-dias-y-3-noches</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-4-dias-y-3-noches"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/waka-wena-canaima-4-dias-y-3-noches"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/waka-wena-canaima-4-dias-y-3-noches"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-hotel-paradise-coche</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-hotel-paradise-coche"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-hotel-paradise-coche"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-hotel-paradise-coche"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-hotel-paradise-coche</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-hotel-paradise-coche"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-hotel-paradise-coche"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-hotel-paradise-coche"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-sunsol-festival</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-sunsol-festival"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-coche-sunsol-festival"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-sunsol-festival"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-isla-de-coche-sunsol-festival</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-sunsol-festival"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-coche-sunsol-festival"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-coche-sunsol-festival"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-coche-catamaranes-del-caribe</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-coche-catamaranes-del-caribe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-coche-catamaranes-del-caribe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-coche-catamaranes-del-caribe"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-coche-catamaranes-del-caribe</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-coche-catamaranes-del-caribe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-coche-catamaranes-del-caribe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-coche-catamaranes-del-caribe"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-sunsol-isla-caribe</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-isla-caribe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-sunsol-isla-caribe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-isla-caribe"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-sunsol-isla-caribe</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-isla-caribe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-sunsol-isla-caribe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-isla-caribe"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-i-love-cubagua</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-i-love-cubagua"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-cubagua-i-love-cubagua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-i-love-cubagua"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-isla-de-cubagua-i-love-cubagua</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-i-love-cubagua"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-isla-de-cubagua-i-love-cubagua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-isla-de-cubagua-i-love-cubagua"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/full-day-sunsol-punta-blanca</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-punta-blanca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-sunsol-punta-blanca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-punta-blanca"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/full-day-sunsol-punta-blanca</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-punta-blanca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/full-day-sunsol-punta-blanca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/full-day-sunsol-punta-blanca"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/cabalgata-isla-de-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/cabalgata-isla-de-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/cabalgata-isla-de-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/cabalgata-isla-de-margarita"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/cabalgata-isla-de-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/cabalgata-isla-de-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/cabalgata-isla-de-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/cabalgata-isla-de-margarita"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/cabalgata-peninsula-de-macanao</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/cabalgata-peninsula-de-macanao"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/cabalgata-peninsula-de-macanao"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/cabalgata-peninsula-de-macanao"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/cabalgata-peninsula-de-macanao</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/cabalgata-peninsula-de-macanao"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/cabalgata-peninsula-de-macanao"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/cabalgata-peninsula-de-macanao"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/tours/jeep-tours-expedicion-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/jeep-tours-expedicion-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/jeep-tours-expedicion-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/jeep-tours-expedicion-margarita"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/tours/jeep-tours-expedicion-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/tours/jeep-tours-expedicion-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/tours/jeep-tours-expedicion-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/tours/jeep-tours-expedicion-margarita"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-marino</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-marino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/waterland-encuentro-marino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-marino"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/attractions/waterland-encuentro-marino</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-marino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/waterland-encuentro-marino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-marino"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-con-delfines</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/waterland-encuentro-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-con-delfines"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/attractions/waterland-encuentro-con-delfines</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/waterland-encuentro-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/waterland-encuentro-con-delfines"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/atracciones/waterland-nado-con-delfines</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/waterland-nado-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/waterland-nado-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/waterland-nado-con-delfines"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/attractions/waterland-nado-con-delfines</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/waterland-nado-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/waterland-nado-con-delfines"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/waterland-nado-con-delfines"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/atracciones/parque-el-agua</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/parque-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/parque-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/parque-el-agua"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/attractions/parque-el-agua</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/atracciones/parque-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/attractions/parque-el-agua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/atracciones/parque-el-agua"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/mejores-playas-isla-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita"/>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Blog Post: Mejores Playas - English -->
   <url>
     <loc>https://paseandoporvenezuela.com/en/blog/mejores-playas-isla-margarita</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/mejores-playas-isla-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/mejores-playas-isla-margarita"/>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Blog Post: Gastronomía - Spanish -->
   <url>
     <loc>https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/gastronomia-margarita-imprescindible"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible"/>
     <lastmod>2024-02-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Blog Post: Gastronomía - English -->
   <url>
     <loc>https://paseandoporvenezuela.com/en/blog/gastronomia-margarita-imprescindible</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/gastronomia-margarita-imprescindible"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/gastronomia-margarita-imprescindible"/>
     <lastmod>2024-02-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Blog Post: Itinerario 7 Días - Spanish -->
   <url>
     <loc>https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/que-hacer-margarita-7-dias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias"/>
     <lastmod>2024-02-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Blog Post: Itinerario 7 Días - English -->
   <url>
     <loc>https://paseandoporvenezuela.com/en/blog/que-hacer-margarita-7-dias</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/que-hacer-margarita-7-dias"/>
-    <lastmod>2024-02-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Hotel Pages - Spanish -->
-  <url>
-    <loc>https://paseandoporvenezuela.com/es/hoteles/hotel-caribe</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/que-hacer-margarita-7-dias"/>
     <lastmod>2024-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://paseandoporvenezuela.com/es/hoteles/hotel-paradise</loc>
-    <lastmod>2024-02-20</lastmod>
+    <loc>https://paseandoporvenezuela.com/es/blog/isla-coche-cubagua-excursion</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/isla-coche-cubagua-excursion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/isla-coche-cubagua-excursion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/isla-coche-cubagua-excursion"/>
+    <lastmod>2024-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Hotel Pages - English -->
   <url>
-    <loc>https://paseandoporvenezuela.com/en/hoteles/hotel-caribe</loc>
-    <lastmod>2024-02-20</lastmod>
+    <loc>https://paseandoporvenezuela.com/en/blog/isla-coche-cubagua-excursion</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/isla-coche-cubagua-excursion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/isla-coche-cubagua-excursion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/isla-coche-cubagua-excursion"/>
+    <lastmod>2024-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://paseandoporvenezuela.com/en/hoteles/hotel-paradise</loc>
-    <lastmod>2024-02-20</lastmod>
+    <loc>https://paseandoporvenezuela.com/es/blog/los-roques-guia-completa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/los-roques-guia-completa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/los-roques-guia-completa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/los-roques-guia-completa"/>
+    <lastmod>2024-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/blog/los-roques-guia-completa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/los-roques-guia-completa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/los-roques-guia-completa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/los-roques-guia-completa"/>
+    <lastmod>2024-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/es/blog/compras-duty-free-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/compras-duty-free-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/compras-duty-free-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/compras-duty-free-margarita"/>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paseandoporvenezuela.com/en/blog/compras-duty-free-margarita</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paseandoporvenezuela.com/es/blog/compras-duty-free-margarita"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paseandoporvenezuela.com/en/blog/compras-duty-free-margarita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paseandoporvenezuela.com/es/blog/compras-duty-free-margarita"/>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
