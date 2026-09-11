@@ -74,6 +74,7 @@ export default function Restaurants() {
         <meta property="og:title" content={t('restaurants.metaTitle')} />
         <meta property="og:description" content={t('restaurants.metaDescription')} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://paseandoporvenezuela.com/${lang}/${lang === 'es' ? 'restaurantes' : 'restaurants'}`} />
         <link rel="canonical" href={`https://paseandoporvenezuela.com/${lang}/${lang === 'es' ? 'restaurantes' : 'restaurants'}`} />
         <link rel="alternate" hrefLang="es" href="https://paseandoporvenezuela.com/es/restaurantes" />
         <link rel="alternate" hrefLang="en" href="https://paseandoporvenezuela.com/en/restaurants" />

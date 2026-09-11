@@ -106,6 +106,7 @@ export default function OffersList({ kind }: { kind: Kind }) {
         <meta property="og:title" content={t(`${ns}.metaTitle`)} />
         <meta property="og:description" content={t(`${ns}.metaDescription`)} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://paseandoporvenezuela.com/${lang}/${base}`} />
         <link rel="canonical" href={`https://paseandoporvenezuela.com/${lang}/${base}`} />
         <link rel="alternate" hrefLang="es" href={`https://paseandoporvenezuela.com/es/${baseFor(kind, 'es')}`} />
         <link rel="alternate" hrefLang="en" href={`https://paseandoporvenezuela.com/en/${baseFor(kind, 'en')}`} />
