@@ -3,8 +3,8 @@ import { hotelTranslationsEN, type HotelTranslation } from '../data/hotelTransla
 import { tourTranslationsEN, tourFeatureLabelsEN } from '../data/tourTranslations';
 import { attractionTranslationsEN, attractionFeatureLabelsEN } from '../data/attractionTranslations';
 
-const API_BASE = 'https://www.venetravel.com/api';
-const IMG_BASE = 'https://www.venetravel.com';
+const API_BASE = 'https://venetravel.net/api';
+const IMG_BASE = 'https://venetravel.net';
 
 /** Respuesta cruda del listado/búsqueda de venetravel. */
 interface RawHotelListItem {
